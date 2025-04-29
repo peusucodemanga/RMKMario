@@ -12,25 +12,30 @@ public class Movimentacao1 : MonoBehaviour
 
     [SerializeField] Transform chaoCheck;
     [SerializeField] LayerMask chaoLayer;
-    [SerializeField] LayerMask canoLayer;
+
+    Animator animPlayer;
+    Animator animPPulo;
 
     private void Awake()
     {
         rbMario = GetComponent<Rigidbody2D>();
+        animPlayer = GetComponent<Animator>();
+        animPPulo = GetComponent<Animator>();
     }
 
     private void Update()
     {
         Chao = Physics2D.Linecast(transform.position, chaoCheck.position, chaoLayer);
-        Cano = Physics2D.Linecast(transform.position, chaoCheck.position, canoLayer);
         Debug.DrawLine(transform.position, chaoCheck.position, Color.blue);    
+        animPPulo.SetBool("pulando",!Chao);
 
-        if (Input.GetButtonDown("Jump") && (Chao||Cano)){
+
+        if (Input.GetButtonDown("Jump") && Chao){
             pulando = true;
         }
          else if (Input.GetButtonUp("Jump") && rbMario.linearVelocityY > 0) {
              rbMario.linearVelocity = new Vector2(rbMario.linearVelocity.x, rbMario.linearVelocity.y*0.5f);
-
+            
         }
     }
 
@@ -44,6 +49,7 @@ public class Movimentacao1 : MonoBehaviour
     {
         float x = Input.GetAxis("Horizontal");
         rbMario.linearVelocity = new Vector2(x * vel, rbMario.linearVelocity.y);
+        animPlayer.SetFloat("velocidade",Mathf.Abs(x));
         if(x<0){
             transform.eulerAngles = new Vector2(0,180);
         }
@@ -55,6 +61,6 @@ public class Movimentacao1 : MonoBehaviour
             rbMario.linearVelocity = Vector2.up * forcaPulo;
             pulando = false;
         }
-
+    
     }
 }

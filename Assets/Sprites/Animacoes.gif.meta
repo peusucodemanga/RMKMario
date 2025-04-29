@@ -1892,13 +1892,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animacoes_45
+      name: WalkM1
       rect:
         serializedVersion: 2
-        x: 291
-        y: 340
-        width: 14
-        height: 17
+        x: 292
+        y: 341
+        width: 13
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1914,13 +1914,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animacoes_46
+      name: WalkM2
       rect:
         serializedVersion: 2
-        x: 306
-        y: 340
-        width: 13
-        height: 18
+        x: 307
+        y: 341
+        width: 11
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1936,13 +1936,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animacoes_47
+      name: WalkM3
       rect:
         serializedVersion: 2
-        x: 320
-        y: 340
-        width: 17
-        height: 18
+        x: 321
+        y: 341
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1980,13 +1980,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animacoes_49
+      name: PuloM
       rect:
         serializedVersion: 2
-        x: 354
-        y: 340
-        width: 18
-        height: 18
+        x: 355
+        y: 341
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2156,13 +2156,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animacoes_57
+      name: MorteM
       rect:
         serializedVersion: 2
-        x: 485
-        y: 340
-        width: 16
-        height: 16
+        x: 486
+        y: 341
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4378,15 +4378,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animacoes_158
+      name: GoombaMorte
       rect:
         serializedVersion: 2
-        x: 276
-        y: 197
-        width: 18
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 277
+        y: 198
+        width: 16
+        height: 8
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6789,7 +6789,6 @@ TextureImporter:
       Animacoes_155: 2528722496486059568
       Animacoes_156: -4384711732731958513
       Animacoes_157: 8029560086265236600
-      Animacoes_158: -5738255117473131977
       Animacoes_16: 1153333100382842238
       Animacoes_161: 7715779496436131156
       Animacoes_162: 9050241890538685109
@@ -6925,11 +6924,8 @@ TextureImporter:
       Animacoes_41: 1110665739761094983
       Animacoes_42: -3359247184201866880
       Animacoes_43: -3083630161813647658
-      Animacoes_45: -3743687632822055878
-      Animacoes_46: -6678126042423937414
-      Animacoes_47: 6305827491507949939
+      Animacoes_44: 264530168
       Animacoes_48: -8935254940158119880
-      Animacoes_49: 5998146283687708408
       Animacoes_5: 5168576850919850531
       Animacoes_50: -2815373236923919508
       Animacoes_51: 8560351375691657830
@@ -6938,7 +6934,6 @@ TextureImporter:
       Animacoes_54: 8359955394622858363
       Animacoes_55: 1940560664884674536
       Animacoes_56: 3071881736170249339
-      Animacoes_57: 4571195334117131967
       Animacoes_58: 6830722783129157883
       Animacoes_59: 7872843038443806340
       Animacoes_6: 2905797994327333798
@@ -6987,7 +6982,13 @@ TextureImporter:
       Animacoes_99: 7947940874522438003
       Goomba1: 276034421588201353
       Goomba2: 2151862634899467665
+      GoombaMorte: -5738255117473131977
       Idle: -6236446125956195248
+      MorteM: 4571195334117131967
+      PuloM: 5998146283687708408
+      WalkM1: -3743687632822055878
+      WalkM2: -6678126042423937414
+      WalkM3: 6305827491507949939
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -5,7 +5,7 @@ public class Goomba : MonoBehaviour
     Rigidbody2D rbGoomba;
     [SerializeField] float velocidade = 1f;
     [SerializeField] Transform p1;
-    [SerializeField] LayerMask canoLayer; // Corrigido para canoLayer
+    [SerializeField] LayerMask canoLayer; 
     [SerializeField] float distancia = 0.2f;
 
     void Awake()
