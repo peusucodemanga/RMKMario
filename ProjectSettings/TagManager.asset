@@ -14,7 +14,7 @@ TagManager:
   - Chao
   - Fundo
   - Camera
-  - Cano
+  - 
   - Inimigo 1
   - Inimigo 2
   - 
@@ -50,7 +50,10 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: MARIO
+  - name: Morro
+    uniqueID: 3041931775
+    locked: 0
+  - name: Plano1
     uniqueID: 2968241629
     locked: 0
   - name: Plantinha
