@@ -2002,13 +2002,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animacoes_50
+      name: Mastro1
       rect:
         serializedVersion: 2
-        x: 373
-        y: 340
-        width: 14
-        height: 17
+        x: 374
+        y: 341
+        width: 12
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2024,13 +2024,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animacoes_51
+      name: Mastro2
       rect:
         serializedVersion: 2
-        x: 388
-        y: 340
-        width: 15
-        height: 18
+        x: 389
+        y: 341
+        width: 13
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6927,8 +6927,6 @@ TextureImporter:
       Animacoes_44: 264530168
       Animacoes_48: -8935254940158119880
       Animacoes_5: 5168576850919850531
-      Animacoes_50: -2815373236923919508
-      Animacoes_51: 8560351375691657830
       Animacoes_52: 8034890081393185936
       Animacoes_53: -3695246714173480973
       Animacoes_54: 8359955394622858363
@@ -6984,6 +6982,8 @@ TextureImporter:
       Goomba2: 2151862634899467665
       GoombaMorte: -5738255117473131977
       Idle: -6236446125956195248
+      Mastro1: -2815373236923919508
+      Mastro2: 8560351375691657830
       MorteM: 4571195334117131967
       PuloM: 5998146283687708408
       WalkM1: -3743687632822055878

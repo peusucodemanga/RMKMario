@@ -10,12 +10,14 @@ public class Goomba : MonoBehaviour
     Animator MorteG,GoombaWalk;
     BoxCollider2D ColisorG;
     [SerializeField]bool MortoM = false;
+    SoundSFX audioManager;
     void Awake()
     {
         rbGoomba = GetComponent<Rigidbody2D>();
         MorteG = GetComponent<Animator>();
         ColisorG = GetComponent<BoxCollider2D>();
         GoombaWalk = GetComponent<Animator>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundSFX>();
     }
         private void Start()
     {
@@ -43,6 +45,7 @@ public class Goomba : MonoBehaviour
         {   collision.GetComponent<Rigidbody2D>().linearVelocity=Vector2.zero;
             collision.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 6, ForceMode2D.Impulse);
             MorteG.SetTrigger("MorteG");
+            audioManager.PlaySFX(audioManager.MataG);
             velocidade=0;
             Destroy(gameObject,0.3f); 
             ColisorG.enabled=false;

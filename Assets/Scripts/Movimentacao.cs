@@ -5,25 +5,22 @@ using UnityEngine.SceneManagement;
 public class Movimentacao1 : MonoBehaviour
 {
     Rigidbody2D rbMario;
-    [SerializeField] float vel = 5f;
-    [SerializeField] float forcaPulo = 8f;
-    [SerializeField] bool pulando;
+    [SerializeField] float vel = 5f,forcaPulo = 8f;
+    [SerializeField] public bool Fim,andarFinal,pulando,mastro=false;
     [SerializeField] bool Chao=true,Chao1=true,CResult;
     [SerializeField] Transform p1Chao,p1,p2Chao,p2;
     [SerializeField] LayerMask chaoLayer;
-
-    Animator animPlayer,animPPulo,animMorte;
+    Animator animPlayer;
     [SerializeField]bool MortoM = false;
     BoxCollider2D MarioColisor;
-    bool MortoM1;
+    SoundSFX audioManager;
 
     private void Awake()
     {
         rbMario = GetComponent<Rigidbody2D>();
         animPlayer = GetComponent<Animator>();
-        animPPulo = GetComponent<Animator>();
-        animMorte = GetComponent<Animator>();
         MarioColisor = GetComponent<BoxCollider2D>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundSFX>();
     }
     private void Start()
     {
@@ -43,17 +40,17 @@ public class Movimentacao1 : MonoBehaviour
         }
         else CResult=false;
           
-        animPPulo.SetBool("pulando",!CResult);
+        animPlayer.SetBool("pulando",!CResult);
 
         if (Input.GetButtonDown("Jump") && CResult){
             pulando = true;
+            audioManager.PlaySFX(audioManager.Pulo);
         }
          else if (Input.GetButtonUp("Jump") && rbMario.linearVelocityY > 0) {
-             rbMario.linearVelocity = new Vector2(rbMario.linearVelocity.x, rbMario.linearVelocity.y*0.5f);
-            
+             rbMario.linearVelocity = new Vector2(rbMario.linearVelocity.x, rbMario.linearVelocity.y*0.5f);           
         }
+    
     }
-
     private void FixedUpdate()
     {
         Mover();
@@ -78,6 +75,7 @@ public class Movimentacao1 : MonoBehaviour
 
             if (pulando){
                 rbMario.linearVelocity = Vector2.up * forcaPulo;
+
                 pulando = false;
             }
         
@@ -88,8 +86,11 @@ public class Movimentacao1 : MonoBehaviour
 
         IEnumerator MorteCoroutine(){
     if(!MortoM){
+        //Botar int com um if se a morte for permanente
+        audioManager.PararBack();
+        audioManager.PlaySFX(audioManager.Morte);
         //Fazendo ele ficar com a animacao certa :3
-        animMorte.SetTrigger("MorteM");
+        animPlayer.SetTrigger("MorteM");
         MortoM=true;
         yield return new WaitForSeconds(0.5f);
         //Fazeno o caba ficar parado
@@ -104,7 +105,7 @@ public class Movimentacao1 : MonoBehaviour
 
 }
     void Reinicia(){
-        SceneManager.LoadScene("Inicio");
+        SceneManager.LoadSceneAsync(0);
     }
 
 }
